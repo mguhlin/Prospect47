@@ -1,0 +1,68 @@
+diff --git a/build_luanti.sh b/build_luanti.sh
+index f66fdd0..86f4fba 100755
+--- a/build_luanti.sh
++++ b/build_luanti.sh
+@@ -17,7 +17,7 @@ export EMSDK_MODULE="-sINCOMING_MODULE_JS_API=mainScriptUrlOrBlob,canvas,monitor
+ export EMSDK_EXTRA="-sUSE_SDL=2 $EMSDK_PORTS $EMSDK_CANVAS $EMSDK_MODULE"
+ export CFLAGS="$CFLAGS $EMSDK_EXTRA"
+ export CXXFLAGS="$CXXFLAGS $EMSDK_EXTRA"
+-export LDFLAGS="$LDFLAGS $EMSDK_EXTRA -sPTHREAD_POOL_SIZE=20 -s EXPORTED_RUNTIME_METHODS=ccall,cwrap -s INITIAL_MEMORY=2013265920 -sMIN_WEBGL_VERSION=2 -sUSE_WEBGL2 -sWASMFS=1"
++export LDFLAGS="$LDFLAGS $EMSDK_EXTRA -sPTHREAD_POOL_SIZE=20 -sFORCE_FILESYSTEM=1 -lidbfs.js -sEXPORTED_RUNTIME_METHODS=ccall,cwrap,FS,IDBFS -sINITIAL_MEMORY=2013265920 -sMIN_WEBGL_VERSION=2 -sUSE_WEBGL2"
+ export LDFLAGS="$LDFLAGS -L$INSTALL_DIR/lib -larchive -lssl -lcrypto -lemsocket -lwebsocket.js"
+ 
+ # Create a dummy .o file to use as a substitute for the OpenGLES2 / EGL libraries,
+diff --git a/static/launcher.js b/static/launcher.js
+index 95fce63..7c098e6 100644
+--- a/static/launcher.js
++++ b/static/launcher.js
+@@ -297,8 +297,36 @@ function consolePrint(text) {
+     }
+ }
+ 
++const PERSISTENT_WORLDS_PATH = '/Luanti/worlds';
++window.p47Persistence = { ready: false, error: null };
++
++function preparePersistentWorlds() {
++    FS.mkdirTree(PERSISTENT_WORLDS_PATH);
++    FS.mount(IDBFS, { autoPersist: true }, PERSISTENT_WORLDS_PATH);
++    addRunDependency('p47-worlds-indexeddb');
++    FS.syncfs(true, (error) => {
++        if (error) {
++            window.p47Persistence.error = String(error);
++            consolePrint('Failed to hydrate persistent worlds: ' + error);
++        } else {
++            window.p47Persistence.ready = true;
++            consolePrint('Persistent worlds ready (IndexedDB)');
++        }
++        removeRunDependency('p47-worlds-indexeddb');
++    });
++}
++
++function flushPersistentWorlds() {
++    if (!window.p47Persistence.ready) return;
++    FS.syncfs(false, (error) => {
++        if (!error) return;
++        window.p47Persistence.error = String(error);
++        consolePrint('Failed to persist worlds: ' + error);
++    });
++}
++
+ var Module = {
+-    preRun: [],
++    preRun: [preparePersistentWorlds],
+     postRun: [],
+     print: consolePrint,
+     canvas: mtCanvas,
+@@ -499,7 +527,11 @@ function setupEscapeHandlers() {
+     });
+ 
+     // Force confirmation before leaving page
+-    window.addEventListener('beforeunload', (e) => { e.preventDefault(); });
++    window.addEventListener('beforeunload', (e) => {
++        flushPersistentWorlds();
++        e.preventDefault();
++    });
++    document.addEventListener('visibilitychange', () => { if (document.hidden) flushPersistentWorlds(); });
+ }
+ 
+ function sendEscapeKey() {

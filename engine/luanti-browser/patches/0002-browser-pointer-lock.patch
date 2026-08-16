@@ -1,0 +1,17 @@
+diff --git a/static/launcher.js b/static/launcher.js
+index a41c185..5ed4606 100644
+--- a/static/launcher.js
++++ b/static/launcher.js
+@@ -808,7 +808,11 @@ class LuantiLauncher {
+             _free(vpnBuf);
+         }
+         if (args.go) {
+-            irrlicht_force_pointerlock();
++            // The historical irrlicht_force_pointerlock helper is not exported
++            // by current builds. Use the browser API while launch() is still
++            // running inside the player's click gesture.
++            const lock = mtCanvas.requestPointerLock();
++            if (lock && lock.catch) lock.catch(() => {});
+         }
+         mtScheduler.setCondition("launch_called");
+     }

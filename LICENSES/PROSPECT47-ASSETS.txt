@@ -1,0 +1,44 @@
+Prospect 47 — original documentation and media license
+======================================================
+
+Original Prospect 47 documentation and media are licensed under the Creative
+Commons Attribution 4.0 International License (CC BY 4.0).
+
+Full text: https://creativecommons.org/licenses/by/4.0/
+
+Asset inventory
+---------------
+
+| Asset | Creator | Source | License | Modified |
+|---|---|---|---|---|
+| game/mods/p47_resources/textures/p47_regolith.png | Prospect 47 team | Original | CC BY 4.0 | No |
+| game/mods/p47_resources/textures/p47_asteroid_rock.png | Prospect 47 team | Original | CC BY 4.0 | No |
+| game/mods/p47_resources/textures/p47_iron_ore.png | Prospect 47 team | Original | CC BY 4.0 | No |
+| game/mods/p47_resources/textures/p47_iron_chunk.png | Prospect 47 team | Original | CC BY 4.0 | No |
+| game/mods/p47_resources/textures/p47_landing_plate.png | Prospect 47 team | Original | CC BY 4.0 | No |
+| game/mods/p47_resources/textures/p47_copper_ore.png | Prospect 47 team | Original | CC BY 4.0 | No |
+| game/mods/p47_resources/textures/p47_silicon_ore.png | Prospect 47 team | Original | CC BY 4.0 | No |
+| game/mods/p47_resources/textures/p47_titanium_ore.png | Prospect 47 team | Original | CC BY 4.0 | No |
+| game/mods/p47_resources/textures/p47_water_ice.png | Prospect 47 team | Original | CC BY 4.0 | No |
+| game/mods/p47_resources/textures/p47_aetherium_signal.png | Prospect 47 team | Original | CC BY 4.0 | No |
+| game/mods/p47_resources/textures/p47_copper_chunk.png | Prospect 47 team | Original | CC BY 4.0 | No |
+| game/mods/p47_resources/textures/p47_silicon_wafer.png | Prospect 47 team | Original | CC BY 4.0 | No |
+| game/mods/p47_resources/textures/p47_titanium_ingot.png | Prospect 47 team | Original | CC BY 4.0 | No |
+| game/mods/p47_resources/textures/p47_water_canister.png | Prospect 47 team | Original | CC BY 4.0 | No |
+| game/mods/p47_resources/textures/p47_storage_crate.png | Prospect 47 team | Original | CC BY 4.0 | No |
+| game/mods/p47_resources/textures/p47_storage_crate_top.png | Prospect 47 team | Original | CC BY 4.0 | No |
+| game/mods/p47_resources/textures/p47_beacon.png | Prospect 47 team | Original | CC BY 4.0 | No |
+| game/mods/p47_resources/textures/p47_survey_marker.png | Prospect 47 team | Original | CC BY 4.0 | No |
+| game/mods/p47_scanner/textures/p47_scanner.png | Prospect 47 team | Original | CC BY 4.0 | No |
+| game/mods/p47_spacecam/textures/p47_spacecam.png | Prospect 47 team | Original | CC BY 4.0 | No |
+| game/mods/p47_scout/textures/p47_scout_*.png | Prospect 47 team | Original | CC BY 4.0 | No |
+| game/mods/p47_tools/textures/p47_field_pick.png | Prospect 47 team | Original | CC BY 4.0 | No |
+
+Pending confirmation
+--------------------
+
+The three root concept-art PNG files (Prospect47_feature.png,
+Prospect47_Story_Map.png, Prospect47_build_first_Habitat.png) are treated as
+visual-direction references pending confirmation of creator, generation method,
+and selected distribution license. Do not redistribute them as production
+assets until that information is recorded.

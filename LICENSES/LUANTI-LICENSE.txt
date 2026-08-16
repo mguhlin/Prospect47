@@ -1,0 +1,15 @@
+Luanti engine license
+=====================
+
+Luanti (formerly Minetest) is not vendored in this repository. The browser
+engine is reproduced locally from the MIT-licensed `paradust7/luanti-wasm`
+wrapper (pinned in docs and engine notes), which in turn pins its own Luanti
+fork and dependencies.
+
+Luanti's core engine is distributed under the GNU Lesser General Public License
+version 2.1 or later, with bundled components under their own licenses.
+
+Before any built artifact ships, copy the complete upstream notices for Luanti,
+the `paradust7/luanti-wasm` wrapper, and every bundled dependency into the
+release distribution. This file is a placeholder for those notices and must be
+replaced with the verbatim upstream license texts at packaging time.

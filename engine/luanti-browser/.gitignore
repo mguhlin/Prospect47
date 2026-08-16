@@ -1,0 +1,5 @@
+vendor/
+dist/
+.tools/
+build-logs/
+.package-staging.*/

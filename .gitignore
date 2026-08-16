@@ -1,0 +1,17 @@
+# Reproducible engine build artifacts (rebuild via engine/luanti-browser/scripts)
+engine/luanti-browser/vendor/
+engine/luanti-browser/.tools/
+engine/luanti-browser/dist/
+engine/luanti-browser/build-logs/
+engine/luanti-browser/.package-staging.*/
+
+# Dependencies and generated binaries
+**/node_modules/
+*.wasm
+*.pack
+
+# OS and editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*~

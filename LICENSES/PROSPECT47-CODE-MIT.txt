@@ -1,0 +1,17 @@
+Prospect 47 — original code license
+===================================
+
+All original Prospect 47 source code is released under the MIT License. The
+authoritative copy of the license text lives in the repository root LICENSE
+file.
+
+Covered by this license:
+
+- game/mods/p47_*/                Lua game modules
+- web/launcher/                   Browser launcher and prototype
+- tests/                          Automated checks
+- engine/luanti-browser/scripts/  Build and packaging scripts
+- engine/luanti-browser/patches/  Original patches applied to upstream sources
+
+Engine modifications distributed against Luanti or its dependencies remain
+subject to those projects' applicable license requirements.

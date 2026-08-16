@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050b17">
+  <meta name="description" content="Prospect 47 browser mission prototype">
+  <title>Prospect 47 — Touchdown</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <main id="app">
+    <section id="launcher" class="screen launcher-screen">
+      <div class="hero-panel">
+        <p class="eyebrow">Frontier Settlement Initiative · Pathfinder Mission</p>
+        <h1>PROSPECT <span>47</span></h1>
+        <p class="tagline">Dig. Craft. Build. Prepare for Tomorrow.</p>
+        <div class="actions">
+          <button id="engineButton" class="primary" hidden>Launch engine alpha</button>
+          <button id="continueButton" class="primary" hidden>Continue expedition</button>
+          <button id="newButton">New expedition</button>
+          <button id="storyButton">Story map</button>
+        </div>
+        <p class="prototype-note">Pre-engine mission prototype · Local progress only</p>
+      </div>
+    </section>
+
+    <section id="mission" class="screen mission-screen" hidden>
+      <header class="hud top-hud">
+        <div><span class="label">Location</span><strong>Landing Zone</strong></div>
+        <div class="mission-title"><span class="label">Mission 01</span><strong>Touchdown</strong></div>
+        <button id="saveButton" class="compact">Save expedition</button>
+      </header>
+
+      <div class="play-area" id="playArea" tabindex="0" aria-label="Landing zone. Use arrow keys or WASD to move.">
+        <div class="planet-glow" aria-hidden="true"></div>
+        <div class="wayfarer landmark"><span>WAYFARER</span></div>
+        <div class="iron-node resource" data-resource="iron" tabindex="0"><span>IRON OUTCROP</span></div>
+        <div class="rock-node resource" data-resource="rock" tabindex="0"><span>REGOLITH</span></div>
+        <div id="scout" class="scout" aria-label="Scout robot"><i></i><span>SCOUT</span></div>
+        <div id="player" class="player" aria-label="Pathfinder"><i></i></div>
+        <div id="interaction" class="interaction" hidden>Press <kbd>E</kbd> to collect</div>
+      </div>
+
+      <aside class="hud objectives">
+        <p class="label">Current objective</p>
+        <h2 id="objectiveTitle">Orient yourself</h2>
+        <ol id="objectiveList">
+          <li data-step="move">Move away from Wayfarer</li>
+          <li data-step="scout">Approach Scout</li>
+          <li data-step="rock">Collect 3 regolith</li>
+          <li data-step="iron">Collect 2 iron</li>
+        </ol>
+        <div class="progress"><span id="progressBar"></span></div>
+      </aside>
+
+      <aside class="hud resources-panel">
+        <p class="label">Field pack</p>
+        <div><span>Regolith</span><strong id="rockCount">0</strong></div>
+        <div><span>Iron</span><strong id="ironCount">0</strong></div>
+      </aside>
+
+      <footer class="controls">Move: <kbd>WASD</kbd> / <kbd>Arrows</kbd> · Interact: <kbd>E</kbd> · Progress saves automatically</footer>
+    </section>
+
+    <section id="story" class="screen story-screen" hidden>
+      <div class="story-card">
+        <p class="eyebrow">Campaign One</p>
+        <h2>A New Frontier</h2>
+        <img src="../../Prospect47_Story_Map.png" alt="Seven-stage Prospect 47 campaign story map">
+        <button class="backButton">Back to launcher</button>
+      </div>
+    </section>
+  </main>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
