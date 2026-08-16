@@ -4,6 +4,16 @@
 
 Prospect 47 is a browser-first asteroid mining and colony-building game built on an experimental WebAssembly port of the open-source Luanti engine. This repository contains the design bible, concept art, phased roadmap, launcher prototype, game modules, and a packaged playable browser alpha.
 
+## Play online
+
+The launcher prototype is published via GitHub Pages:
+
+<https://mguhlin.github.io/Prospect47/>
+
+GitHub Pages cannot send the cross-origin isolation headers the threaded WASM
+engine requires, so the live site runs the pre-engine launcher prototype. Run
+the real engine alpha locally with the isolated server described below.
+
 ## Run the prototype
 
 No dependencies or build step are required:
