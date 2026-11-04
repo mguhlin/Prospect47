@@ -55,7 +55,7 @@ This roadmap converts the broad design bible into gated, testable releases. Work
 
 **Gate:** Scan three resources, locate ice, reach Survey Ridge, trigger the anomaly, take a screenshot, and resume saved progress.
 
-**In progress (2026-08-16):** The geology loop is implemented in the native game. `p47_world` distributes iron, copper, silicon, titanium, and clustered water ice by depth, raises a copper/silicon-rich Survey Ridge, and buries the violet Aetherium anomaly in the core. `p47_scanner` adds the Advanced Geological Scanner (deposit report + anomaly detection + persistent waypoint) and craftable survey markers; `p47_spacecam` adds the SpaceCam photo tool. `p47_missions` was rebuilt as a data-driven engine and now ships Mission 02 Survey Ridge (reach the ridge, raise three markers, scan, map deposits, locate ice, mark the anomaly, build a relay). Browser runtime validation of the full Phase 2 loop, plus data-driven mission UI in the launcher, remain open.
+**In progress:** The geology loop is implemented in the native game. `p47_world` distributes iron, copper, silicon, titanium, and clustered water ice by depth, raises a copper/silicon-rich Survey Ridge, and buries the violet Aetherium anomaly in the core. `p47_scanner` adds the Advanced Geological Scanner (deposit report + anomaly detection + persistent waypoint) and craftable survey markers; `p47_spacecam` adds the SpaceCam photo tool. `p47_missions` was rebuilt as a data-driven engine and now ships Mission 02 Survey Ridge (reach the ridge, raise three markers, scan, map deposits, locate ice, mark the anomaly, build a relay). Browser runtime validation of the full Phase 2 loop, plus data-driven mission UI in the launcher, remain open.
 
 ## Phase 3 — Industrial / v0.3
 
