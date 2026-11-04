@@ -7,7 +7,6 @@ Official upstream Luanti does not currently ship a documented browser build. Pro
 ```text
 Repository: https://github.com/paradust7/luanti-wasm.git
 Revision:   69e94f3a43422f10f07a4e0630ff413be1354669
-Date:       2026-07-31
 License:    MIT (wrapper); bundled/fetched dependencies retain their licenses
 Status:     Experimental—not an official Luanti web distribution
 ```

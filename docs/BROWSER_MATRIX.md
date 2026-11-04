@@ -18,7 +18,9 @@ Status values: Not tested, Pass, Partial, Fail.
 | Screenshot | Pass (headless capture) | Not tested | Not tested | Not tested |
 | Fullscreen | Not integrated | Not integrated | Not integrated | Not integrated |
 
-## Chrome evidence — 2026-08-07
+<a id="chrome-evidence-2026-08-07"></a><a id="chrome-evidence--2026-08-07"></a>
+
+## Chrome evidence
 
 - Environment: Google Chrome headless on Debian 13, isolated localhost origin.
 - Luanti: 5.16.1 via pinned `paradust7/luanti-wasm` revision.
